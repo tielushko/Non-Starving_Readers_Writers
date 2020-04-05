@@ -132,11 +132,9 @@ int main() {
     */
     
     pthread_t threads[NTHREADS];
-    char c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
     char symbols[NTHREADS];
     int index = 0;
-    char buffer[30];
-    
+        
     while (1){
       //scan a single character
       char c = fgetc(fp);

@@ -1,6 +1,6 @@
 rwmain:  main.o
-	g++ -pthread main.o -o rwmain
+	gcc -pthread main.o -o rwmain
 main.o: main.c
-	g++ -c main.c
+	gcc -c main.c
 clean:
 	rm *.o rwmain
