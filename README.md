@@ -20,6 +20,7 @@ or if compiled using alternative way:
     ./a.out
 
 Clean up by invoking:
+    
     make clean
 If you are adding your own scenario, make sure to hit enter when you are finished typing. E.G. for 6 scenarios, there should be 7 lines. Otherwise, the last scenario will get ignored as there is no '\n' character.
 
