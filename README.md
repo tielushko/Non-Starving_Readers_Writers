@@ -6,13 +6,17 @@ The requirements of the lock are the following:
 
 To Run the Program:
 Compile with:
+    
     make rwmain
 or alternatively: 
+    
     gcc -pthread main.c
 
 Execute with: 
+    
     ./rwmain 
 or if compiled using alternative way:
+    
     ./a.out
 
 Clean up by invoking:
