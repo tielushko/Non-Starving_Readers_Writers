@@ -18,7 +18,7 @@
 //the struct for reader-writer locks
 typedef struct {
     sem_t wrt; //write lock - to prevent a writer from entering the system when readers are there.
-    sem_t mutex; //mutex - to prevent writers from entering when readers are executed and vice versa.
+    sem_t mutex; //mutex - to prevent threads from modifying counter.
     int counter; // the number of readers in the execution.
     sem_t wIn; //turnslite semaphore, once writer thread enter, it calls sem_wait on the wIn, so when the reader arrives after, it puts itself to sleep, which allows the writer to not get overcome by readers and prevents starvation.
 } rwlock_t; 
@@ -134,7 +134,7 @@ int main() {
     pthread_t threads[NTHREADS];
     char symbols[NTHREADS];
     int index = 0;
-        
+
     while (1){
       //scan a single character
       char c = fgetc(fp);
